@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Context = React.createContext();
 const { Provider } = Context;
 
-class HashContainer extends React.Component {
+class Container extends React.Component {
   constructor(props) {
     super(props);
 
@@ -33,9 +33,9 @@ class HashContainer extends React.Component {
   }
 }
 
-HashContainer.propTypes = {
+Container.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-export default HashContainer;
+export default Container;
 export { Context };
