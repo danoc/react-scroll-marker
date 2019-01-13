@@ -5,6 +5,9 @@
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "yarn test:eslint && yarn test:jest && yarn test:prettier",
     "test:eslint": "eslint . --ignore-path .gitignore --ext .jsx --ext .js",
