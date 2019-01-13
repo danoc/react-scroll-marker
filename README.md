@@ -1,6 +1,6 @@
-# react-active-hash
+# react-scroll-marker
 
-[![Build status](https://badgen.net/travis/danoc/react-active-hash)](https://travis-ci.com/danoc/react-active-hash) [![Code coverage](https://badgen.net/codecov/c/github/danoc/react-active-hash)](https://codecov.io/gh/danoc/react-active-hash)
+[![Build status](https://badgen.net/travis/danoc/react-scroll-marker)](https://travis-ci.com/danoc/react-scroll-marker) [![Code coverage](https://badgen.net/codecov/c/github/danoc/react-scroll-marker)](https://codecov.io/gh/danoc/react-scroll-marker)
 
 ## Usage example
 
