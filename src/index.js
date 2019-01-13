@@ -1,3 +1,3 @@
-export { default as HashContainer } from "./container";
-export { default as HashLink } from "./link";
-export { default as HashSection } from "./section";
+export { default as ScrollMarkerContainer } from "./container";
+export { default as ScrollMarkerLink } from "./link";
+export { default as ScrollMarkerSection } from "./section";

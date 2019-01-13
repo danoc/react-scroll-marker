@@ -1,23 +1,27 @@
 import React from "react";
 import { cleanup, fireEvent, render } from "react-testing-library";
-import { HashContainer, HashLink, HashSection } from "./index";
+import {
+  ScrollMarkerContainer,
+  ScrollMarkerLink,
+  ScrollMarkerSection
+} from "./index";
 
 afterEach(cleanup);
 
-describe("HashLink", () => {
+describe("ScrollMarkerLink", () => {
   test("turns `id` into an `href`", () => {
     const id = "overview";
 
     const { getByText } = render(
-      <HashContainer>
-        <HashLink id={id}>
+      <ScrollMarkerContainer>
+        <ScrollMarkerLink id={id}>
           {({ href, onClick }) => (
             <a href={href} onClick={onClick}>
               Overview
             </a>
           )}
-        </HashLink>
-      </HashContainer>
+        </ScrollMarkerLink>
+      </ScrollMarkerContainer>
     );
 
     const anchor = getByText("Overview");
@@ -26,8 +30,8 @@ describe("HashLink", () => {
 
   test("sets active section when clicked", () => {
     const { getByText } = render(
-      <HashContainer>
-        <HashLink id="overview">
+      <ScrollMarkerContainer>
+        <ScrollMarkerLink id="overview">
           {({ isActive, href, onClick }) => (
             <a
               href={href}
@@ -38,8 +42,8 @@ describe("HashLink", () => {
               Overview
             </a>
           )}
-        </HashLink>
-      </HashContainer>
+        </ScrollMarkerLink>
+      </ScrollMarkerContainer>
     );
 
     const anchor = getByText("Overview");
@@ -49,23 +53,23 @@ describe("HashLink", () => {
   });
 });
 
-describe("HashSection", () => {
+describe("ScrollMarkerSection", () => {
   test("renders a `div` by default", () => {
     const { getByText } = render(
-      <HashContainer>
-        <HashSection id="goose">Overview</HashSection>
-      </HashContainer>
+      <ScrollMarkerContainer>
+        <ScrollMarkerSection id="goose">Overview</ScrollMarkerSection>
+      </ScrollMarkerContainer>
     );
     expect(getByText("Overview").tagName).toBe("DIV");
   });
 
   test("can be customized to render a `div`", () => {
     const { getByText } = render(
-      <HashContainer>
-        <HashSection is="marquee" id="goose">
+      <ScrollMarkerContainer>
+        <ScrollMarkerSection is="marquee" id="goose">
           Overview
-        </HashSection>
-      </HashContainer>
+        </ScrollMarkerSection>
+      </ScrollMarkerContainer>
     );
 
     expect(getByText("Overview").tagName).toBe("MARQUEE");
@@ -73,11 +77,11 @@ describe("HashSection", () => {
 
   test("spreads arbitrary props on root element", () => {
     const { getByText } = render(
-      <HashContainer>
-        <HashSection id="example" data-duck-duck="goose">
+      <ScrollMarkerContainer>
+        <ScrollMarkerSection id="example" data-duck-duck="goose">
           Overview
-        </HashSection>
-      </HashContainer>
+        </ScrollMarkerSection>
+      </ScrollMarkerContainer>
     );
 
     expect(getByText("Overview").getAttribute("data-duck-duck")).toBe("goose");

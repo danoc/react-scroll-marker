@@ -5,25 +5,29 @@
 ## Usage example
 
 ```jsx
-import { HashContainer, HashLink, HashSection } from "react-hash";
+import {
+  ScrollMarkerContainer,
+  ScrollMarkerLink,
+  ScrollMarkerSection
+} from "react-scroll-marker";
 
 const Page = () => (
-  <HashContainer>
+  <ScrollMarkerContainer>
     <nav>
-      <HashLink id="overview">
+      <ScrollMarkerLink id="overview">
         {({ isActive, href, onClick }) => (
           <a href={href} onClick={onClick}>
             Overview
           </a>
         )}
-      </HashLink>
-      <HashLink id="history">
+      </ScrollMarkerLink>
+      <ScrollMarkerLink id="history">
         {({ isActive, href, onClick }) => (
           <a href={href} onClick={onClick}>
             History
           </a>
         )}
-      </HashLink>
+      </ScrollMarkerLink>
     </nav>
     <main>
       {/*
@@ -31,16 +35,16 @@ const Page = () => (
         all attributes as well as an `is` prop that can be used
         to change the element.
       */}
-      <HashSection id="overview">
+      <ScrollMarkerSection id="overview">
         <h2>Overview</h2>
         <p>…</p>
-      </HashSection>
+      </ScrollMarkerSection>
 
-      <HashSection id="history">
+      <ScrollMarkerSection id="history">
         <h2>History</h2>
         <p>…</p>
-      </HashSection>
+      </ScrollMarkerSection>
     </main>
-  </HashContainer>
+  </ScrollMarkerContainer>
 );
 ```
