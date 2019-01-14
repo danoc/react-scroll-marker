@@ -14,14 +14,14 @@ import {
 const Page = () => (
   <ScrollMarkerContainer>
     <nav>
-      <ScrollMarkerLink id="overview">
+      <ScrollMarkerLink to="/about/#overview">
         {({ isActive, href, onClick }) => (
           <a href={href} onClick={onClick}>
             Overview
           </a>
         )}
       </ScrollMarkerLink>
-      <ScrollMarkerLink id="history">
+      <ScrollMarkerLink to="/about/#history">
         {({ isActive, href, onClick }) => (
           <a href={href} onClick={onClick}>
             History
