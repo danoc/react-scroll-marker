@@ -1,4 +1,4 @@
-# 👀 `react-scroll-marker`
+# `react-scroll-marker`
 
 [![NPM version](https://badgen.net/npm/v/react-scroll-marker)](https://www.npmjs.com/package/react-scroll-marker) [![Build status](https://badgen.net/travis/danoc/react-scroll-marker)](https://travis-ci.com/danoc/react-scroll-marker) [![Code coverage](https://badgen.net/codecov/c/github/danoc/react-scroll-marker)](https://codecov.io/gh/danoc/react-scroll-marker) [![Bundle size](https://badgen.net/bundlephobia/min/react-scroll-marker?label=size)](https://bundlephobia.com/result?p=react-scroll-marker) [![Bundle size](https://badgen.net/bundlephobia/minzip/react-scroll-marker?label=gzip%20size)](https://bundlephobia.com/result?p=react-scroll-marker)
 
