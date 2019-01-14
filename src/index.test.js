@@ -9,32 +9,13 @@ import {
 afterEach(cleanup);
 
 describe("ScrollMarkerLink", () => {
-  test("passes `to` to child", () => {
-    const to = "overview";
-
-    const { getByText } = render(
-      <ScrollMarkerContainer>
-        <ScrollMarkerLink to={to}>
-          {({ to: innerTo, onClick }) => (
-            <a href={innerTo} onClick={onClick}>
-              Overview
-            </a>
-          )}
-        </ScrollMarkerLink>
-      </ScrollMarkerContainer>
-    );
-
-    const anchor = getByText("Overview");
-    expect(anchor.getAttribute("href")).toBe(to);
-  });
-
   test("sets active section when clicked", () => {
     const { getByText } = render(
       <ScrollMarkerContainer>
-        <ScrollMarkerLink to="overview">
-          {({ isActive, to, onClick }) => (
+        <ScrollMarkerLink id="overview">
+          {({ isActive, onClick }) => (
             <a
-              href={to}
+              href="#overview"
               onClick={onClick}
               data-testid="click-here"
               data-test-is-active={isActive}

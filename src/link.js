@@ -5,16 +5,15 @@ import { Context } from "./container";
 
 class Link extends React.Component {
   render() {
-    const { to, children } = this.props;
+    const { id, children } = this.props;
     const { activeId, setActive } = this.context;
 
-    const isActive = to === activeId;
+    const isActive = id === activeId;
 
     return children({
       isActive,
-      to,
       onClick: () => {
-        setActive(to);
+        setActive(id);
       }
     });
   }
@@ -23,7 +22,7 @@ class Link extends React.Component {
 Link.contextType = Context;
 
 Link.propTypes = {
-  to: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   children: PropTypes.func.isRequired
 };
 
