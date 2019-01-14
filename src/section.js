@@ -5,7 +5,7 @@ import Waypoint from "react-waypoint";
 import { Context } from "./container";
 
 const Section = props => {
-  const { id, is, ...rest } = props;
+  const { id, is, children, ...rest } = props;
   const Container = is;
 
   return (
@@ -13,7 +13,14 @@ const Section = props => {
       {({ setActive }) => (
         <React.Fragment>
           <Waypoint onEnter={() => setActive(id)} />
-          <Container id={id} {...rest} />
+
+          {typeof children === "function" ? (
+            children({ id })
+          ) : (
+            <Container id={id} {...rest}>
+              {children}
+            </Container>
+          )}
         </React.Fragment>
       )}
     </Context.Consumer>
@@ -22,7 +29,8 @@ const Section = props => {
 
 Section.propTypes = {
   is: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  id: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired
 };
 
 Section.defaultProps = {
