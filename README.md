@@ -2,6 +2,22 @@
 
 [![NPM version](https://badgen.net/npm/v/react-scroll-marker)](https://www.npmjs.com/package/react-scroll-marker) [![Build status](https://badgen.net/travis/danoc/react-scroll-marker)](https://travis-ci.com/danoc/react-scroll-marker) [![Code coverage](https://badgen.net/codecov/c/github/danoc/react-scroll-marker)](https://codecov.io/gh/danoc/react-scroll-marker) [![Bundle size](https://badgen.net/bundlephobia/min/react-scroll-marker?label=size)](https://bundlephobia.com/result?p=react-scroll-marker) [![Bundle size](https://badgen.net/bundlephobia/minzip/react-scroll-marker?label=gzip%20size)](https://bundlephobia.com/result?p=react-scroll-marker)
 
+> Indicate the active section of a page based on scroll position.
+
+## Install
+
+You can install `react-scroll-marker` with NPM or Yarn.
+
+```bash
+npm install react-scroll-marker --save-exact
+```
+
+```bash
+yarn add react-scroll-marker --exact
+```
+
+We encourage pinning the version number until `react-scroll-marker` reaches `1.0.0`. We may ship breaking changes in `0.x.x` versions.
+
 ## Usage example
 
 ```jsx
