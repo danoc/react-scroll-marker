@@ -10,6 +10,7 @@ module.exports = {
     "jest/globals": true
   },
   rules: {
-    "react/jsx-filename-extension": ["error", { extensions: [".js"] }]
+    "react/jsx-filename-extension": ["error", { extensions: [".js"] }],
+    "import/no-extraneous-dependencies": ["error", { devDependencies: true }]
   }
 };
