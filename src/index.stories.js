@@ -133,59 +133,66 @@ storiesOf("Overview", module).add("full example", () => (
         </ScrollMarkerSection>
 
         <ScrollMarkerSection id="organization">
-          <h2>Organization</h2>
+          {({ id }) => (
+            <section>
+              <h2 id={id}>Organization</h2>
 
-          <p>
-            Nullam facilisis justo nec felis interdum, sed iaculis purus porta.
-            Pellentesque nec tellus condimentum, varius ipsum ac, vulputate
-            urna. Aliquam a bibendum sapien. Cras varius eu turpis id ultricies.
-            Morbi porttitor erat libero, in malesuada purus tristique vel.
-            Maecenas sapien nisl, condimentum at sodales a, efficitur feugiat
-            enim. Aliquam sit amet nibh ligula. Ut tortor nunc, molestie et arcu
-            vitae, aliquam mattis neque. Nam iaculis, lacus eu commodo rutrum,
-            nisi dui tempor nisi, non fringilla augue lectus eu augue. Maecenas
-            ac scelerisque elit. Donec mollis ex scelerisque pellentesque
-            lobortis. Phasellus id viverra sapien. Integer ultricies, urna non
-            blandit consectetur, ex erat lobortis dui, ut sollicitudin diam
-            justo sed metus. Nunc vel nunc cursus, euismod ex eget, ullamcorper
-            turpis. Fusce at dignissim ligula.
-          </p>
+              <p>
+                Nullam facilisis justo nec felis interdum, sed iaculis purus
+                porta. Pellentesque nec tellus condimentum, varius ipsum ac,
+                vulputate urna. Aliquam a bibendum sapien. Cras varius eu turpis
+                id ultricies. Morbi porttitor erat libero, in malesuada purus
+                tristique vel. Maecenas sapien nisl, condimentum at sodales a,
+                efficitur feugiat enim. Aliquam sit amet nibh ligula. Ut tortor
+                nunc, molestie et arcu vitae, aliquam mattis neque. Nam iaculis,
+                lacus eu commodo rutrum, nisi dui tempor nisi, non fringilla
+                augue lectus eu augue. Maecenas ac scelerisque elit. Donec
+                mollis ex scelerisque pellentesque lobortis. Phasellus id
+                viverra sapien. Integer ultricies, urna non blandit consectetur,
+                ex erat lobortis dui, ut sollicitudin diam justo sed metus. Nunc
+                vel nunc cursus, euismod ex eget, ullamcorper turpis. Fusce at
+                dignissim ligula.
+              </p>
 
-          <h3>University leadership</h3>
+              <h3>University leadership</h3>
 
-          <p>
-            Nullam facilisis justo nec felis interdum, sed iaculis purus porta.
-            Pellentesque nec tellus condimentum, varius ipsum ac, vulputate
-            urna. Aliquam a bibendum sapien. Cras varius eu turpis id ultricies.
-            Morbi porttitor erat libero, in malesuada purus tristique vel.
-            Maecenas sapien nisl, condimentum at sodales a, efficitur feugiat
-            enim. Aliquam sit amet nibh ligula. Ut tortor nunc, molestie et arcu
-            vitae, aliquam mattis neque. Nam iaculis, lacus eu commodo rutrum,
-            nisi dui tempor nisi, non fringilla augue lectus eu augue. Maecenas
-            ac scelerisque elit. Donec mollis ex scelerisque pellentesque
-            lobortis. Phasellus id viverra sapien. Integer ultricies, urna non
-            blandit consectetur, ex erat lobortis dui, ut sollicitudin diam
-            justo sed metus. Nunc vel nunc cursus, euismod ex eget, ullamcorper
-            turpis. Fusce at dignissim ligula.
-          </p>
+              <p>
+                Nullam facilisis justo nec felis interdum, sed iaculis purus
+                porta. Pellentesque nec tellus condimentum, varius ipsum ac,
+                vulputate urna. Aliquam a bibendum sapien. Cras varius eu turpis
+                id ultricies. Morbi porttitor erat libero, in malesuada purus
+                tristique vel. Maecenas sapien nisl, condimentum at sodales a,
+                efficitur feugiat enim. Aliquam sit amet nibh ligula. Ut tortor
+                nunc, molestie et arcu vitae, aliquam mattis neque. Nam iaculis,
+                lacus eu commodo rutrum, nisi dui tempor nisi, non fringilla
+                augue lectus eu augue. Maecenas ac scelerisque elit. Donec
+                mollis ex scelerisque pellentesque lobortis. Phasellus id
+                viverra sapien. Integer ultricies, urna non blandit consectetur,
+                ex erat lobortis dui, ut sollicitudin diam justo sed metus. Nunc
+                vel nunc cursus, euismod ex eget, ullamcorper turpis. Fusce at
+                dignissim ligula.
+              </p>
 
-          <h3>Colleges and schools</h3>
+              <h3>Colleges and schools</h3>
 
-          <p>
-            Nullam facilisis justo nec felis interdum, sed iaculis purus porta.
-            Pellentesque nec tellus condimentum, varius ipsum ac, vulputate
-            urna. Aliquam a bibendum sapien. Cras varius eu turpis id ultricies.
-            Morbi porttitor erat libero, in malesuada purus tristique vel.
-            Maecenas sapien nisl, condimentum at sodales a, efficitur feugiat
-            enim. Aliquam sit amet nibh ligula. Ut tortor nunc, molestie et arcu
-            vitae, aliquam mattis neque. Nam iaculis, lacus eu commodo rutrum,
-            nisi dui tempor nisi, non fringilla augue lectus eu augue. Maecenas
-            ac scelerisque elit. Donec mollis ex scelerisque pellentesque
-            lobortis. Phasellus id viverra sapien. Integer ultricies, urna non
-            blandit consectetur, ex erat lobortis dui, ut sollicitudin diam
-            justo sed metus. Nunc vel nunc cursus, euismod ex eget, ullamcorper
-            turpis. Fusce at dignissim ligula.
-          </p>
+              <p>
+                Nullam facilisis justo nec felis interdum, sed iaculis purus
+                porta. Pellentesque nec tellus condimentum, varius ipsum ac,
+                vulputate urna. Aliquam a bibendum sapien. Cras varius eu turpis
+                id ultricies. Morbi porttitor erat libero, in malesuada purus
+                tristique vel. Maecenas sapien nisl, condimentum at sodales a,
+                efficitur feugiat enim. Aliquam sit amet nibh ligula. Ut tortor
+                nunc, molestie et arcu vitae, aliquam mattis neque. Nam iaculis,
+                lacus eu commodo rutrum, nisi dui tempor nisi, non fringilla
+                augue lectus eu augue. Maecenas ac scelerisque elit. Donec
+                mollis ex scelerisque pellentesque lobortis. Phasellus id
+                viverra sapien. Integer ultricies, urna non blandit consectetur,
+                ex erat lobortis dui, ut sollicitudin diam justo sed metus. Nunc
+                vel nunc cursus, euismod ex eget, ullamcorper turpis. Fusce at
+                dignissim ligula.
+              </p>
+            </section>
+          )}
         </ScrollMarkerSection>
       </main>
     </ScrollMarkerContainer>

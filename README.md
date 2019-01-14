@@ -39,18 +39,27 @@ const Page = () => (
     </nav>
     <main>
       {/*
-        Generates a `div` with an `id` of overview. It accepts
-        all attributes as well as an `is` prop that can be used
-        to change the element.
+        Generates a `div` with an `id` of overview. It accepts all attributes
+        as well as an `is` prop that can be used to change the element.
       */}
       <ScrollMarkerSection id="overview">
         <h2>Overview</h2>
         <p>…</p>
       </ScrollMarkerSection>
 
+      {/*
+        Can also accept a function as `children`. In this mode, the component
+        does not render its own HTML. The `id` is passed to the `children` as
+        a small convenience. This method is useful if you need specific control
+        over the rendered HTML.
+      */}
       <ScrollMarkerSection id="history">
-        <h2>History</h2>
-        <p>…</p>
+        {({ id }) => (
+          <React.Fragment>
+            <h2 id={id}>History</h2>
+            <p>…</p>
+          </React.Fragment>
+        )}
       </ScrollMarkerSection>
     </main>
   </ScrollMarkerContainer>
