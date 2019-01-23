@@ -7,6 +7,7 @@ module.exports = {
   ],
   plugins: ["jest"],
   env: {
+    browser: true,
     "jest/globals": true
   },
   rules: {

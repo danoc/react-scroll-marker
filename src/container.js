@@ -15,6 +15,20 @@ class Container extends React.Component {
     this.setActive = this.setActive.bind(this);
   }
 
+  componentDidMount() {
+    if (
+      // https://github.com/akiran/can-use-dom
+      typeof window !== "undefined" &&
+      window.document &&
+      window.document.createElement &&
+      // Check to see if there is a hash.
+      window.location &&
+      window.location.hash
+    ) {
+      this.setActive(window.location.hash.replace("#", ""));
+    }
+  }
+
   setActive(id) {
     this.setState({
       activeId: id
