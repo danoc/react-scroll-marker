@@ -12,7 +12,16 @@ const Section = props => {
     <Context.Consumer>
       {({ setActive }) => (
         <React.Fragment>
-          <Waypoint onEnter={() => setActive(id)} />
+          <Waypoint
+            onEnter={({ event }) => {
+              // We only want to mark a section as active if the section is
+              // scrolled into view. `Waypoint`, by default, fires events on
+              // resize, mount, and re-render.
+              if (event) {
+                setActive(id);
+              }
+            }}
+          />
 
           {typeof children === "function" ? (
             children({ id })
