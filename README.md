@@ -54,11 +54,6 @@ const Page = () => (
       </ScrollMarkerLink>
     </nav>
     <main>
-      {/*
-        Accepts a function as `children`. In this mode, the component
-        does not render its own HTML. The `id` is passed to the `children` as
-        a small convenience.
-      */}
       <ScrollMarkerSection id="overview">
         {({ id }) => (
           <React.Fragment>
