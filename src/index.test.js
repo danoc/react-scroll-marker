@@ -73,36 +73,15 @@ describe("ScrollMarkerLink", () => {
 });
 
 describe("ScrollMarkerSection", () => {
-  test("renders a `div` by default", () => {
-    const { getByText } = render(
+  test("passes `id` through to children", () => {
+    const { getByTestId } = render(
       <ScrollMarkerContainer>
-        <ScrollMarkerSection id="goose">Overview</ScrollMarkerSection>
-      </ScrollMarkerContainer>
-    );
-    expect(getByText("Overview").tagName).toBe("DIV");
-  });
-
-  test("can be customized to render a `marquee` tag", () => {
-    const { getByText } = render(
-      <ScrollMarkerContainer>
-        <ScrollMarkerSection is="marquee" id="goose">
-          Overview
+        <ScrollMarkerSection id="overview">
+          {({ id }) => <div data-testid={id}>Overview</div>}
         </ScrollMarkerSection>
       </ScrollMarkerContainer>
     );
 
-    expect(getByText("Overview").tagName).toBe("MARQUEE");
-  });
-
-  test("spreads arbitrary props on root element", () => {
-    const { getByText } = render(
-      <ScrollMarkerContainer>
-        <ScrollMarkerSection id="example" data-duck-duck="goose">
-          Overview
-        </ScrollMarkerSection>
-      </ScrollMarkerContainer>
-    );
-
-    expect(getByText("Overview").getAttribute("data-duck-duck")).toBe("goose");
+    expect(getByTestId("overview")).toBeTruthy();
   });
 });
