@@ -78,15 +78,17 @@ const Page = () => (
 
 ## API
 
+This package exports three components.
+
 ### `ScrollMarkerContainer`
 
 The outermost container that wraps the `ScrollMarkerLink` and `ScrollMarkerSection` components. This component exists so that the other two components can communicate.
 
 #### Props
 
-| Prop       | Type               | Description                                                                                                                       |
-| ---------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| `children` | `node` \| required | The navigation and content on your page. The `children` should include instances of `ScrollMarkerLink` and `ScrollMarkerSection`. |
+| Prop       | Type             | Description                                                                                                                       |
+| ---------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `children` | `node`, required | The navigation and content on your page. The `children` should include instances of `ScrollMarkerLink` and `ScrollMarkerSection`. |
 
 ### `ScrollMarkerLink`
 
@@ -94,10 +96,10 @@ This component wraps each nav item and tells you whether the nav item is active.
 
 #### Props
 
-| Prop       | Type                 | Description                                                                                                                                                                                                                                                                                                                              |
-| ---------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children` | `func` \| required   | This component expects a function as the `children`. The function will receive an object with two properties: `isActive` and `onClick`. `isActive` is a boolean that indicates whether the nav item is currently being viewed. `onClick` is a function that should be passed to the anchor tag. It makes the highlighting more reliable. |
-| `id`       | `string` \| required | The `id` of the section that corresponds to the nav item. There should be a corresponding `ScrollMarkerSection` with the same `id`.                                                                                                                                                                                                      |
+| Prop       | Type               | Description                                                                                                                                                                                                                                                                                                                              |
+| ---------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `children` | `func`, required   | This component expects a function as the `children`. The function will receive an object with two properties: `isActive` and `onClick`. `isActive` is a boolean that indicates whether the nav item is currently being viewed. `onClick` is a function that should be passed to the anchor tag. It makes the highlighting more reliable. |
+| `id`       | `string`, required | The `id` of the section that corresponds to the nav item. There should be a corresponding `ScrollMarkerSection` with the same `id`.                                                                                                                                                                                                      |
 
 ### `ScrollMarkerSection`
 
@@ -105,7 +107,7 @@ This component wraps sections of content on a page. It communicates with `Scroll
 
 #### Props
 
-| Prop       | Type                 | Description                                                                                                                                                                                                                                                                                                                                                                       |
-| ---------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children` | `func` \| required   | This component expects a function as the `children`. The function will receive an object with a single `id` property. The `id` should then be passed to a heading in the section. You'll notice that the value of the `id` is the same as the string passed in as the `id` prop. We provide it as a small convenience so that consumers don't need to duplicate it in two places. |
-| `id`       | `string` \| required | The `id` of the section on the page. There should be a corresponding `ScrollMarkerLink` with the same `id`.                                                                                                                                                                                                                                                                       |
+| Prop       | Type               | Description                                                                                                                                                                                                                                                                                                                                                                       |
+| ---------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `children` | `func`, required   | This component expects a function as the `children`. The function will receive an object with a single `id` property. The `id` should then be passed to a heading in the section. You'll notice that the value of the `id` is the same as the string passed in as the `id` prop. We provide it as a small convenience so that consumers don't need to duplicate it in two places. |
+| `id`       | `string`, required | The `id` of the section on the page. There should be a corresponding `ScrollMarkerLink` with the same `id`.                                                                                                                                                                                                                                                                       |
