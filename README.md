@@ -56,19 +56,19 @@ const Page = () => (
     <main>
       <ScrollMarkerSection id="overview">
         {({ id }) => (
-          <React.Fragment>
+          <section>
             <h2 id={id}>Overview</h2>
             <p>…</p>
-          </React.Fragment>
+          </section>
         )}
       </ScrollMarkerSection>
 
       <ScrollMarkerSection id="history">
         {({ id }) => (
-          <React.Fragment>
+          <section>
             <h2 id={id}>History</h2>
             <p>…</p>
-          </React.Fragment>
+          </section>
         )}
       </ScrollMarkerSection>
     </main>
