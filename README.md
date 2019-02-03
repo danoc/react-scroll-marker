@@ -78,7 +78,7 @@ const Page = () => (
 
 ## API
 
-This package exports three components.
+This package exports three components: `ScrollMarkerContainer`, `ScrollMarkerLink`, and `ScrollMarkerSection`. Here's the documentation for each.
 
 ### `ScrollMarkerContainer`
 
