@@ -1,7 +1,7 @@
 {
   "name": "react-scroll-marker",
   "description": "Indicate the active section of a page based on scroll position.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Daniel O'Connor <daniel@danoc.me>",
   "license": "MIT",
   "main": "dist/react-scroll-marker.js",
